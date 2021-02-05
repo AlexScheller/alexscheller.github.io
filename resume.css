@@ -1,0 +1,154 @@
+/*
+	One goal of the css for this is that it works both as a printed pdf
+	document, and as a static web page.
+*/	
+
+/* general elements */
+
+html {
+	font-size: 17px;
+}
+
+body {
+	font-family: "Cascadia Code", sans-serif;
+	/*font-family: sans-serif;*/
+	height: 90vh;
+	padding: 10px;
+}
+
+ul {
+	box-sizing: border-box;
+}
+
+li:not(:last-child) {
+	margin-bottom: 5px;
+}
+
+a {
+	color: black;
+}
+
+.section {
+	/*padding-bottom: 10px;*/
+	/*border-bottom: 1px solid black;*/
+	margin-bottom: 10px;
+}
+
+.section-title {
+	/*font-weight: bold;*/
+	font-size: 1.25rem;
+	border-bottom: 1px solid black;
+	padding-bottom: 10px;
+	margin-bottom: 10px;
+}
+
+/* Play around with this one maybe. */
+.section-subtitle {
+	display: flex;
+	justify-content: space-between;
+/*	display: grid;
+	grid-template-columns: auto auto auto;
+	justify-content: space-between;*/
+	/*margin-bottom: 10px;*/
+	margin-bottom: 15px;
+	margin-top: 15px;
+	font-weight: bold;
+}
+
+/*.subtitle-content-secondary {
+	justify-self
+}*/
+
+.section-content-list {
+	list-style: '> ' inside;
+	/* Why does this have to be a hack... */
+	text-indent: -20px;
+	margin-left: 20px;
+	/*margin-bottom: 10px;*/
+	/*margin-left: 30px;*/
+}
+
+/* Specific elements in page order */
+
+header {
+	display: flex;
+	flex-direction: row-reverse;
+	/*justify-content: space-around;*/
+	justify-content: space-between;
+	align-items: center;
+	flex-wrap: wrap;
+	margin-top: 10px;
+	margin-bottom: 25px;
+}
+
+#name {
+	font-size: 2rem;
+	margin: 0 5%;
+	/*display: flex;*/
+	/*justify-content: space-around;*/
+}
+
+/* vvv if not (header: row-reverse) vvv */
+/*#contact-info {
+	display: flex;
+	flex-direction: column;
+}
+
+#contact-info > li {
+	display: flex;
+	flex-direction: row-reverse;
+}*/
+/* ^^^ if not (header: row-reverse) ^^^ */
+
+#contact-info > li:not(:last-child) {
+	margin-bottom: 5px;
+}
+
+#contact-info > p:not(:last-child) {
+	margin-bottom: 5px;
+}
+
+/*.job:not(:last-child) {
+	margin-bottom: 20px;
+}*/
+
+/* Screen directives */
+@media only screen {
+	body {
+		width: 850px;
+		margin: auto;
+	}
+}
+
+@media only screen and (max-width: 950px) {
+	body {
+		width: 100%;
+		box-sizing: border-box;
+	}
+}
+
+@media only screen and (max-width: 750px) {
+	.section-subtitle {
+		flex-direction: column;
+	}
+	.section-subtitle > *:not(:last-child) {
+		margin-bottom: 10px;
+	}
+	#name {
+		margin: auto;
+	}
+	#contact-info {
+		font-size: .9rem;
+		margin-top: 10px;
+		display: flex;
+		flex-direction: row;
+		flex-wrap: wrap;
+		justify-content: space-around;
+	}
+}
+
+/* Print directive */
+@media print {
+	@page { margin: 0; }
+	body { padding: 1cm; }
+}

@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="stylesheet" type="text/css" href="./reset.css">
+		<link rel="stylesheet" type="text/css" href="./resume.css">
+		<script src="https://kit.fontawesome.com/d4ed660ff8.js" crossorigin="anonymous"></script>
+	</head>
+	<body>
+		<header>
+			<div id="name">
+				<h1>Alex Scheller</h1>
+			</div>
+			<ul id="contact-info">
+				
+				<li><i class="fas fa-map-marker-alt"></i>&nbsp;<span>Seattle, WA</span></li>
+				
+				
+				
+				<li><i class="fab fa-github"></i>&nbsp;<span><a href="https://github.com/AlexScheller">github.com/AlexScheller</a></span></li>
+				
+				
+				<li><i class="far fa-envelope"></i>&nbsp;<span>alex.scheller.app@gmail.com</span></li>
+				
+			</ul>
+		</header>
+		<div id="languages-technologies" class="section">
+			<h2 class="section-title">Languages & Technologies</h2>
+			<ul class="section-content-list">
+				
+				<li>languages: python, javascript/HTML/CSS, experience with Java, C#</li>
+				
+				<li>tools: git, docker/docker-compose</li>
+				
+				<li>technologies/frameworks: flask, redis, celery</li>
+				
+			</ul>
+		</div>
+		<div id="work-history" class="section">
+			<h2 class="section-title">Work History</h2>
+			
+			<div class="job">
+				<div class="section-subtitle">
+					<h3 class="subtitle-content-primary">Transmark Logistics</h3>
+					<h3 class="subtitle-content-secondary">Application Developer</h3>
+					<h3 class="subtitle-date">2019 - present</h3>
+				</div>
+				<ul class="section-content-list">
+					
+					<li>Over the course of a year, at first in a small team and then as a solo developer, implemented a ground-up rewrite of the company's internal workflow management tool in python with Flask. Took the project from initial background research through to completion and roll out, and into long term support.</li>
+					
+					<li>Designed how the system worked at a high-level, transitioning from a monolith to a service based approach and decoupling the front- and backends. This allowed for greater development focus, isolation of system issues, extensibility and integration with third-party software, as well as scalability.</li>
+					
+					<li>When the team was expanded during the initial phase of the project, I participated in the hiring process by developing technical problems and questions for interviews as well as interviewing candidates.</li>
+					
+					<li>Made use of the SQLalchemy ORM in order to allow a DBMS agnostic approach to application models. This was crucial for rapid initial development without being locked into a given database engine. Implemented database versioning with migration revisions, allowing for the downgrading and upgrading of the db schema from any point in the application's development history to any other point.</li>
+					
+					<li>Implemented various methods of automated task creation. This included a scheduling system underlaid by celery and RabbitMQ, with timed expirations, recurring tasks coordinated with RRULE, and proper timezone and DST transition handling, as well as a system allowing user generated rulesets with customer-, task-type, and department-specific triggers and task templating.</li>
+					
+					<li>Developed a robust notification system. The dispatch system was designed in such a way that new contact methods could be integrated through a standard interface, allowing rapid additions. SMS, Email, in-application, and google chat notifications were implemented. User's can subscribe to various topic channels to receive tailored reports and alerts, as well as customize their accepted methods and time periods throughout the day they wanted to receive messages in.</li>
+					
+					<li>Implemented an interface that provided appropriate ux for both mobile and desktop screen sizes.</li>
+					
+					<li>Configured and containerized application with docker and docker-compose for rapid and uniform deployments.</li>
+					
+					<li>Provisioned and maintained cloud resources/systems from multiple vendors for various systems including application servers, mail servers, and message queues.</li>
+					
+					<li>Made it a priority to create and maintain accessible developer documentation for the application to ensure future maintainability.</li>
+					
+					<li>Worked closely with a wide variety of non-technical managers and end-users at all levels of the company hierarchy and across departments. This included regular meetings with the CEO for progress updates and mid- to long-term prioritization, as well as day to day discussions with lower management and desk-level users for feature requests, pain-point resolution and bugfixes.</li>
+						
+				</ul>
+			</div>
+			
+			<div class="job">
+				<div class="section-subtitle">
+					<h3 class="subtitle-content-primary">Transmark Logistics</h3>
+					<h3 class="subtitle-content-secondary">Junior Software Developer</h3>
+					<h3 class="subtitle-date">2018 - 2019</h3>
+				</div>
+				<ul class="section-content-list">
+					
+					<li>Maintained legacy internal workflow management tool. The application was written in C# on the ASP.NET framework and made use of IIS and Microsoft SQL Server. Administered user account creation and report generation.</li>
+					
+					<li>Created an automated shipping rate calculation tool for customer use. The project was written in python on the flask framework.</li>
+					
+					<li>Created a freight quote request and management tool for customer use, also with python and the flask framework.</li>
+						
+				</ul>
+			</div>
+			
+		</div>
+		<div id="education" class="section">
+			<h2 class="section-title">Education</h2>
+			<div class="section-subtitle">
+				<h3 class="subtitle-content">Western Washington University</h3>
+				<span class="subtitle-date">June, 2017</span>
+			</div>
+			<ul class="section-content-list">
+				
+				
+				
+				<li>B.S. Computer Science</li>
+				
+				<li>B.A. German</li>
+				
+			</ul>
+		</div>
+		<div id="extra" class="section">
+			<h2 class="section-title">Outside of Work</h2>
+			<p>I'm currently building a web implementation of a chess variant with fog of war, working through Robert Nystrom's "Crafting Interpreters" and learning rust.</p>
+		</div>
+		<footer></footer>
+	</body>
+</html>
