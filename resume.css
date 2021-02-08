@@ -20,6 +20,10 @@ ul {
 	box-sizing: border-box;
 }
 
+li {
+	line-height: 1.3rem;
+}
+
 li:not(:last-child) {
 	margin-bottom: 5px;
 }
