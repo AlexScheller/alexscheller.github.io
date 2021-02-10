@@ -21,7 +21,7 @@ ul {
 }
 
 li {
-	line-height: 1.3rem;
+	line-height: 1.2rem;
 }
 
 li:not(:last-child) {
@@ -64,10 +64,12 @@ a {
 }*/
 
 .section-content-list {
-	list-style: '> ' inside;
+	list-style: disc;
+	padding-left: 20px;
+	/*list-style: '> ' inside;*/
 	/* Why does this have to be a hack... */
-	text-indent: -20px;
-	margin-left: 20px;
+	/*text-indent: -20px;*/
+	/*margin-left: 20px;*/
 	/*margin-bottom: 10px;*/
 	/*margin-left: 30px;*/
 }
@@ -122,6 +124,9 @@ header {
 		width: 850px;
 		margin: auto;
 	}
+	.section:last-child {
+		margin-bottom: 25px;
+	}
 }
 
 @media only screen and (max-width: 950px) {
@@ -155,4 +160,5 @@ header {
 @media print {
 	@page { margin: 0; }
 	body { padding: 1cm; }
+	header { margin-bottom: 10px; }
 }
