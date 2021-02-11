@@ -106,6 +106,10 @@ header {
 	/*justify-content: space-around;*/
 }
 
+#contact-info li i {
+	margin-right: .7rem;
+}
+
 /* vvv if not (header: row-reverse) vvv */
 /*#contact-info {
 	display: flex;
