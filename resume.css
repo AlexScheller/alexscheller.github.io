@@ -20,11 +20,23 @@ ul {
 	box-sizing: border-box;
 }
 
-li {
+li, dl {
 	line-height: 1.2rem;
 }
 
 li:not(:last-child) {
+	margin-bottom: 5px;
+}
+
+dt {
+	display: list-item;
+	list-style-type: disc;
+	float: left;
+	clear: left;
+}
+
+dd {
+	padding-left: 150px;
 	margin-bottom: 5px;
 }
 
